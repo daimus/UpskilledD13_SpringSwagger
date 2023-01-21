@@ -30,7 +30,7 @@ public class GetUserByEmailServiceTest {
         void GetUserByEmail_ValidInput_True(){
             // Given
             String email = "johndoe@mail.com";
-            User user = new User(101L, email, "password");
+            User user = new User(101L, email, "080000000000", "password");
             given(userRepository.getUserByEmail(email)).willReturn(Optional.of(user));
             // When
             Optional<User> actualUser = getUserByEmailService.getUserByEmail(email);
